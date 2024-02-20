@@ -9,15 +9,13 @@ namespace Minifantasy
         private Animator animator;
 
         public string parameterName = "Idle";
-        public float x = 1;
-        public float y = 1;
         public float waitTime = 0f;
 
         private void Start()
         {
             animator = GetComponentInChildren<Animator>();
             Invoke("ToggleAnimatorParameter", waitTime);
-            ToggleDirection();
+            //ToggleDirection();
         }
 
         public void ToggleAnimatorParameter()
@@ -25,10 +23,12 @@ namespace Minifantasy
             animator.SetBool(parameterName, true);
         }
 
-        public void ToggleDirection()
+        public void ToggleDirection(Vector3 inputPos)
         {
-            animator.SetFloat("X", x);
-            animator.SetFloat("Y", y);
+            Vector3 dir = (new Vector3(inputPos.x - transform.position.x, 0 ,0 )).normalized;
+
+            transform.GetComponentInChildren<SpriteRenderer>().flipX = (dir.x > 0) ? false : true;
+
         }
     }
 }
