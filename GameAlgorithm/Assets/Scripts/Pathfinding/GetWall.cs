@@ -29,6 +29,7 @@ public class GetWall : MonoBehaviour
                 float wall_y = y;
 
                 //Áß½ÉÁ¡ 
+                //0.5 -> nodeHalfSize
                 wall_x += 0.5f;
                 wall_y += 0.5f;
 

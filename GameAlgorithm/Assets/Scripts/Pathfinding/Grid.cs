@@ -7,7 +7,7 @@ public class Grid : MonoBehaviour
 {
     Vector3 inputPos;
     Vector2 numberOfGrids;
-    public float nodeSize;
+    float nodeSize = 1.0f;
     Node[,] grid; //노드의 2차원 배열
     public Tilemap _WallTilemap;
 
@@ -120,7 +120,10 @@ public class Grid : MonoBehaviour
 
                 if (playernode == n)
                 {
-                    Gizmos.color = Color.black;
+                    if (playernode.isWalkable)
+                    {
+                        Gizmos.color = Color.black;
+                    }
                 }
                 else
                 {

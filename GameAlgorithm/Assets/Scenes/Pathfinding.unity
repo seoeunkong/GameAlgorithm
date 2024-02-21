@@ -355,6 +355,7 @@ MonoBehaviour:
   _changeTile: {fileID: 11400000, guid: 9c4a23647e7b44e46ad6df501927b362, type: 2}
   _defaultTile: {fileID: 11400000, guid: 3cd5b002dfd81ea4c99ab52383c9a07d, type: 2}
   _orc: {fileID: 633681449}
+  _destination: {fileID: 633681451}
 --- !u!114 &535295541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,11 +368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7fb95760bdd3b4d9897dadab3dc21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  unwalkableMask:
-    serializedVersion: 2
-    m_Bits: 0
-  nodeSize: 1
   _WallTilemap: {fileID: 698318761}
   path: []
 --- !u!1 &619394800
@@ -459,6 +455,11 @@ Transform:
 --- !u!1 &633681449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5720277353491606258, guid: 4843c6294db27f84bb07ff202205e1ea, type: 3}
+  m_PrefabInstance: {fileID: 960285320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &633681451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5720277353491606260, guid: 4843c6294db27f84bb07ff202205e1ea, type: 3}
   m_PrefabInstance: {fileID: 960285320}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &698318758
@@ -3449,7 +3450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720277353491606260, guid: 4843c6294db27f84bb07ff202205e1ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8749999
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 5720277353491606260, guid: 4843c6294db27f84bb07ff202205e1ea, type: 3}
       propertyPath: m_LocalPosition.y
